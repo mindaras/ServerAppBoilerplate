@@ -20,7 +20,16 @@ From your project directory:
 
 #### Local:
 
+<strong>db</strong>:
+
+with data persistence:
+`docker run -d --rm --name blog-db --mount type=volume,src=data,target=/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres` <br />
+
+without data persistence:
 `docker run -d --rm --name blog-db -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres` <br />
+
+<strong>app</strong>:
+
 `npm start`
 
 #### Fully containerized 🚀:
