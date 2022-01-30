@@ -8,13 +8,13 @@ From your project directory:
 
 ### Production
 
-#### Application:
-
-`docker run -d --rm -p=8000:8000 --name=CONTAINER_NAME YOUR_IMAGE`
-
 #### Database:
 
-`docker run -d --rm --name blog-db -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres`
+`docker run -d --restart unless-stopped --name blog-db -p 5432:5432 -e POSTGRES_DB=YOUR_DB -e POSTGRES_PASSWORD=YOUR_PASSWORD postgres`
+
+#### Application:
+
+`docker run -d --restart unless-stopped -p=8000:8000 -e PORT=8000 -e TOKEN_SECRET=secret -e DB_USER=user -e DB_HOST=YOUR_DB_HOST -e DB=YOUR_DB -e DB_PASSWORD=YOUR_DB_PASSWORD -e DB_PORT=5432 --name=CONTAINER_NAME IMAGE_NAME`
 
 ### Development
 
