@@ -59,3 +59,7 @@ Note: make npm installations in container environment since some dependencies ar
 ### Revert last migration
 
 `npm run migration:down`
+
+## Testing
+
+Run: `npm test`
