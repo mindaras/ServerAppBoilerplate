@@ -25,6 +25,14 @@ From your project directory:
 
 #### Local:
 
+##### Only running:
+
+<strong>if you only need to run the application</strong>:
+
+`docker-compose up --build`
+
+##### Developing:
+
 <strong>db</strong>:
 
 with data persistence:
@@ -45,10 +53,10 @@ without data persistence:
 
 `npm start`
 
-#### Fully containerized 🚀:
+##### Fully containerized 🚀:
 
 `docker-compose rm -f` <br />
-`docker-compose up --build -d` <br />
+`docker-compose -f dev.docker-compose.yml up --build -d` <br />
 `docker exec -it YOUR_CONTAINER bash` <br />
 `npm i` <br />
 `npm run migration:up && npm start` <br />

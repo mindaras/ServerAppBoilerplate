@@ -13,7 +13,10 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      // "@modules/*": ["src/modules/*"]
+      "@config/*": ["src/config/*"],
+      "@common/*": ["src/common/*"],
+      "@db/*": ["src/db/*"],
+      "@modules/*": ["src/modules/*"]
     }
   },
   "exclude": ["node_modules", "dist", "migrations", "tests"]
